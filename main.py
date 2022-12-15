@@ -14,6 +14,7 @@ engine = create_engine("sqlite:///user.db", echo=True)
 meta = MetaData()
 app.config["SECRET_KEY"] = "efdck4549itfdfvslkreit054tgr44"
 
+#SQL ALCHEMY TABLE creation
 User = Table(
     "User",meta,
     Column("s.no",Integer,primary_key=True,autoincrement=True),
@@ -23,6 +24,7 @@ User = Table(
 )
 meta.create_all(engine)
 
+#creating form for flask wtf
 class Register(FlaskForm):
     name= StringField(label="name")
     email = StringField(label="email")
