@@ -1,0 +1,24 @@
+<html>
+    <head> 
+        <title>
+            register page using flask form
+        </title>
+    </head>
+    <body>
+        <!-- we will get the form object here -->
+        <h1> {{ form }}</h1>
+        <form method="POST"></form>
+<!-- form.name.label will print the label -->
+        {{ form.name.label() }}
+        <!-- form.name will make a input box  here we can define the bootstrap classes for
+        example form.name(class=form-control,placeholder="enter your name") -->
+        {{ form.name(placeholder="enter your username") }}
+        {{ form.name.label() }}
+        {{ form.name(placeholder="enter your username") }}
+
+        {{ form.email.label() }}
+        {{ form.email(placeholder="enter your email") }}
+
+        {{form.submit()}}
+    </body>
+</html>
